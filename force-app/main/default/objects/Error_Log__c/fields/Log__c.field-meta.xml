@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Log__c</fullName>
+    <description>log number</description>
+    <displayFormat>LN-{0000}</displayFormat>
+    <externalId>false</externalId>
+    <inlineHelpText>log number</inlineHelpText>
+    <label>Log</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>AutoNumber</type>
+</CustomField>

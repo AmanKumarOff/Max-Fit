@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#AB277A</headerColor>
+        <logo>MicrosoftTeamsimage</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Event Management Application</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>MAX FIT</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>Location__c</tabs>
+    <tabs>Events__c</tabs>
+    <tabs>Attendees__c</tabs>
+    <tabs>Speaker__c</tabs>
+    <tabs>Event_Speaker__c</tabs>
+    <tabs>Error_Log__c</tabs>
+    <tabs>Event_Attendee__c</tabs>
+    <tabs>Event_Organizer__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>MAX_FIT_UtilityBar</utilityBar>
+</CustomApplication>

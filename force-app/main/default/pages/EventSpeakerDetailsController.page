@@ -1,0 +1,32 @@
+<apex:page controller="EventSpeakerDetailsController">
+    <apex:form >
+        <apex:pageBlock >
+            <div align="center" style="padding-top:15px; border:1px solid black">
+                <span style="margin:15px; padding:15px">{!evt.Name__c}</span><br/><br/>
+                <span style="margin:15px; padding:15px"><apex:outputLabel value="Organized By: "/> {!evt.Organizer__r.Name}<br/><br/><br/></span>
+            </div>
+            <div style="margin:15px" align="center">
+                <apex:outputLabel value="Location: "/> {!evt.Location_Address_Book__r.Name}<br/>
+                <apex:outputLabel value="Start: "/> {!evt.Start__c}<br/>
+            </div>
+            <div style="border:1px solid black; margin:15px; padding:15px" align="center">
+                <apex:outputLabel value="Speakers"/>
+            </div>
+            <div style="display:flex;">
+                <apex:repeat value="{!evtSpkr}" var="spkr">
+                    <div style="padding:15px; border:1px solid black; margin:15px; width:33%">
+                        <span style="padding:15px;font: normal small-caps bold 15px/30px Georgia,serif">{!spkr.Speaker__r.Name}</span>
+                        <br/><br/><br/>
+                        <span style="padding:15px;color:aqua" ><apex:outputLink value="{!spkr.Speaker__r.Profile_URL__c}" >{!spkr.Speaker__r.Profile_URL__c}</apex:outputLink></span>
+                        <br/>
+                        <apex:outputText escape="false" value="{!spkr.Speaker__r.About_Me__c}" />
+                    </div>                                        
+                </apex:repeat>
+            </div>
+            <div align="center" draggable="false" >
+            <apex:commandButton value="As Attendee" action="{!saveAsAttendee}"/>
+            <apex:commandButton value="As Speaker" action="{!saveAsSpeaker}"/>
+            </div>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End__c</fullName>
+    <description>Select end date and time</description>
+    <externalId>false</externalId>
+    <inlineHelpText>You need to select end date and time</inlineHelpText>
+    <label>End</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

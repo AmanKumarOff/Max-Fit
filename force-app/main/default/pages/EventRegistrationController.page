@@ -1,0 +1,40 @@
+<apex:page controller="EventRegistrationController">
+    <apex:form >
+        <apex:pageBlock title="Event Registration">
+            <!-- <apex:pageBlockButtons> -->
+            
+            <!-- </apex:pageBlockButtons> -->
+            <apex:pageBlockSection title="Event organizer" collapsible="true" columns="2" >
+                <apex:inputField value="{!evtOrganizer.Name}" />
+                <apex:inputField value="{!evtOrganizer.Phone__c}"/>
+                <apex:inputField value="{!evtOrganizer.Email__c}"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="Event" collapsible="true" columns="2">
+                <apex:inputField value="{!evt.Name__c}" />
+                <apex:inputField value="{!evt.Event_Type__c}" />
+                <apex:inputField value="{!evt.Max_Seats__c}" />
+                <apex:inputField value="{!evt.Start__c}" />
+                <apex:inputField value="{!evt.End__c}" />
+                <apex:inputField value="{!evt.Live__c}" />
+                <apex:inputField value="{!evt.Recurring__c}" />
+                <apex:inputField value="{!evt.Frequency__c}" />
+                
+
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Location" collapsible="true" columns="2">
+                <apex:inputField value="{!loc.Name}"/>
+                <apex:inputField value="{!loc.Landmark__c}"/>
+                <apex:inputField value="{!loc.Street__c}"/>
+                <apex:inputField value="{!loc.City__c}"/>
+                <apex:inputField value="{!loc.Postal_Code__c}"/>
+                <apex:inputField value="{!loc.Country__c}"/>
+                
+            </apex:pageBlockSection>
+            <div align="center" draggable="false" >
+                <apex:commandButton value="Save" action="{!save}"/>
+            </div>
+        </apex:pageBlock>    
+    </apex:form>
+</apex:page>

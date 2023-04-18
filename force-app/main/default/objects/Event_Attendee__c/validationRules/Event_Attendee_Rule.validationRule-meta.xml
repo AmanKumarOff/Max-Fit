@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Attendee_Rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>Events__r.End__c &lt; DATETIMEVALUE(TODAY()) ||  Events__r.Live__c = False ||  Events__r.Remaining_Seats__c = 0</errorConditionFormula>
+    <errorDisplayField>Attendees__c</errorDisplayField>
+    <errorMessage>Attendee can only be associated with the Event whose End Date is in future &amp; Event Live Checkbox is checked and Event is accepting the Attendees</errorMessage>
+</ValidationRule>

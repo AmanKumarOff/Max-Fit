@@ -1,0 +1,19 @@
+<apex:page controller="SpeakerRegistrationController">
+    <apex:form >
+        <apex:pageBlock title="Speaker Registration">
+            <apex:pageBlockSection title="Speaker Registration" collapsible="true" columns="2">
+                
+                <apex:inputField value="{!spk.Name}"/>
+                <apex:inputField value="{!spk.Email__c}"/>
+                <apex:inputField value="{!spk.Phone__c}"/>
+                <apex:inputField value="{!spk.Company__c}"/>
+                <apex:inputField value="{!espk.Events__c}" rendered="{!espk.Events__c==null}"/>
+                <apex:outputField value="{!espk.Events__c}" rendered="{!espk.Events__c!=null}"/>
+            </apex:pageBlockSection>
+
+            <div align="center" draggable="false" >
+                <apex:commandButton value="Save" action="{!save}"/>
+            </div>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

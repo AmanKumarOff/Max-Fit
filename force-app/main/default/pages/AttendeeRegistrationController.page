@@ -1,0 +1,30 @@
+<apex:page controller="AttendeeRegistrationController">
+    <apex:form >
+        <apex:pageBlock title="Attendee Registration ">
+            
+            <apex:pageBlockSection title="Attendee Detail" collapsible="true" columns="2">
+                <apex:inputField value="{!att.Name}"/>
+                <apex:inputField value="{!att.Email__c}"/>
+                <apex:inputField value="{!att.Phone__c}"/>
+                <apex:inputField value="{!evtAttendee.Events__c}" rendered="{!evtAttendee.Events__c==null}"/>
+                <apex:outputField value="{!evtAttendee.Events__c}" rendered="{!evtAttendee.Events__c!=null}"/>
+                
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="Location" collapsible="true" columns="2">
+                <apex:inputField value="{!loc.Name}"/>
+                <apex:inputField value="{!loc.Street__c}"/>
+                <apex:inputField value="{!loc.City__c}"/>
+                <apex:inputField value="{!loc.State__c}"/>
+                <apex:inputField value="{!loc.Country__c}"/>
+                <apex:inputField value="{!loc.Postal_Code__c}"/>
+                
+            </apex:pageBlockSection>
+
+        <div align="center" draggable="false" >
+            <apex:commandButton value="Save" action="{!save}"/>
+        </div>
+      
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
